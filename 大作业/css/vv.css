@@ -1,0 +1,24 @@
+.image-container {  
+  position: relative;  
+  width: 100%; /* 你可以设置固定宽度或百分比宽度 */  
+  max-width: 1000px; /* 如果需要的话，可以设置一个最大宽度 */  
+  height: auto; /* 保持图片的比例 */  
+  overflow: hidden; /* 如果图片移动超出了容器，则隐藏超出部分（在这种情况下可能不需要） */  
+}  
+  
+.animated-image {  
+  width: 100%; /* 初始宽度 */  
+  animation: floatAndShrink 2s ease-out forwards; /* 应用动画，持续时间2秒 */  
+}  
+  
+@keyframes floatAndShrink {  
+  0% {  
+    transform: translateY(0) scale(1); /* 初始位置和大小 */  
+  }  
+  50% {  
+    transform: translateY(-20px) scale(0.9); /* 中间状态：向上移动20px并缩小到90% */  
+  }  
+  100% {  
+    transform: translateY(-50px) scale(0.7); /* 最终状态：向上移动50px并缩小到70% */  
+  }  
+}
